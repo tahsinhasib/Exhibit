@@ -19,10 +19,15 @@ namespace Exhibition_Management_System
             if(panel3.Width >= 599)
             {
                 timer1.Stop();
-                Login login= new Login();
-                login.Show();
+                Title title = new Title();
+                title.Show();
                 this.Hide();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
