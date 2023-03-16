@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace Exhibition_Management_System
 {
-    public partial class Title : Form
+    public partial class CreateAccount : Form
     {
-        public Title()
+        public CreateAccount()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
         }
     }
 }

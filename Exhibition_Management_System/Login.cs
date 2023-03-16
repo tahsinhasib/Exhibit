@@ -27,5 +27,18 @@ namespace Exhibition_Management_System
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CreateAccount createAccount= new CreateAccount();
+            createAccount.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Title title = new Title();
+            title.Show();
+            this.Hide();
+        }
     }
 }
