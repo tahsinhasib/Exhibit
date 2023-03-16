@@ -34,10 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 853);
-            this.Location = new System.Drawing.Point(100, 30);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1432, 873);
             this.Name = "CreateAccount";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
             this.ResumeLayout(false);
 
