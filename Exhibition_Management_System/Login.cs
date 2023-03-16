@@ -12,9 +12,20 @@ namespace Exhibition_Management_System
 {
     public partial class Login : Form
     {
+        
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
