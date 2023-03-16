@@ -37,6 +37,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1348, 721);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXHIBITION MANAGEMENT SYSTEM";
             this.ResumeLayout(false);
 
