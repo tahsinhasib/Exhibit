@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppOwnerDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -46,7 +45,6 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.panelChildForm);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -56,19 +54,11 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelChildForm.Location = new System.Drawing.Point(370, 60);
+            this.panelChildForm.BackColor = System.Drawing.Color.Transparent;
+            this.panelChildForm.Location = new System.Drawing.Point(336, 12);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(991, 580);
+            this.panelChildForm.Size = new System.Drawing.Size(990, 580);
             this.panelChildForm.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel3.Location = new System.Drawing.Point(447, 732);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(855, 125);
-            this.panel3.TabIndex = 1;
             // 
             // panel2
             // 
@@ -80,7 +70,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 201);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(280, 402);
+            this.panel2.Size = new System.Drawing.Size(232, 391);
             this.panel2.TabIndex = 0;
             // 
             // button5
@@ -91,7 +81,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.Location = new System.Drawing.Point(0, 320);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(280, 82);
+            this.button5.Size = new System.Drawing.Size(232, 82);
             this.button5.TabIndex = 4;
             this.button5.Text = "Logout";
             this.button5.UseVisualStyleBackColor = true;
@@ -105,7 +95,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(0, 240);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(280, 80);
+            this.button4.Size = new System.Drawing.Size(232, 80);
             this.button4.TabIndex = 3;
             this.button4.Text = "Transactions";
             this.button4.UseVisualStyleBackColor = true;
@@ -118,7 +108,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(0, 160);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(280, 80);
+            this.button3.Size = new System.Drawing.Size(232, 80);
             this.button3.TabIndex = 2;
             this.button3.Text = "Venues";
             this.button3.UseVisualStyleBackColor = true;
@@ -131,7 +121,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(0, 80);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(280, 80);
+            this.button2.Size = new System.Drawing.Size(232, 80);
             this.button2.TabIndex = 1;
             this.button2.Text = "Users";
             this.button2.UseVisualStyleBackColor = true;
@@ -144,7 +134,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 80);
+            this.button1.Size = new System.Drawing.Size(232, 80);
             this.button1.TabIndex = 0;
             this.button1.Text = "Profile";
             this.button1.UseVisualStyleBackColor = true;
@@ -171,7 +161,6 @@
 
         private Panel panel1;
         private Panel panelChildForm;
-        private Panel panel3;
         private Panel panel2;
         private Button button5;
         private Button button4;
