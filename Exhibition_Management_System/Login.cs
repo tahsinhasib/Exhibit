@@ -46,5 +46,17 @@ namespace Exhibition_Management_System
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+            AppOwnerDashboard apd = new AppOwnerDashboard();
+            apd.ShowDialog();
+        }
     }
 }
