@@ -30,15 +30,21 @@ namespace Exhibition_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             CreateAccount createAccount= new CreateAccount();
-            createAccount.Show();
+            createAccount.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Title title = new Title();
-            title.Show();
-            this.Hide();
+            title.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

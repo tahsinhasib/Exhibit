@@ -96,5 +96,12 @@ namespace Exhibition_Management_System
         {
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Login login = new Login();
+            login.ShowDialog();
+        }
     }
 }

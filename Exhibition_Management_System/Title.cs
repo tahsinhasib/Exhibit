@@ -24,9 +24,9 @@ namespace Exhibition_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Login login = new Login();
-            login.Show();
-            this.Hide();
+            login.ShowDialog();
         }
     }
 }
