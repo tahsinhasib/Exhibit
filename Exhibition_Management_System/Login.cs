@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Exhibition_Management_System
 {
     public partial class Login : Form
     {
         
+
         public Login()
         {
             InitializeComponent();
@@ -59,20 +61,20 @@ namespace Exhibition_Management_System
         {
             String u_name;
             String u_pass;
-
+            String ACC;
 
             try
             {
                 String query = "SELECT * FROM UserDataTable WHERE Username = '" + textBox1.Text + "' AND Password = '" + textBox2.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
-
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
 
-                String acctype = "SELECT [Account] FROM UserDataTable WHERE Username = '" + textBox1.Text + "'";
-                SqlDataAdapter sda2 = new SqlDataAdapter(query, con);
+                String query2 = "SELECT Account FROM UserDataTable WHERE Username = '" + textBox1.Text + "'";
+                SqlDataAdapter sda2 = new SqlDataAdapter(query2, con);
                 DataTable dtable2 = new DataTable();
-                sda2.Fill(dtable2);
+                sda.Fill(dtable2);
+                ACC = dtable2.Rows[0]["Account"].ToString();                //this one determines wether to launch user or host dashboard
 
                 if (textBox1.Text != "" || textBox2.Text != "")
                 {
@@ -82,21 +84,24 @@ namespace Exhibition_Management_System
                         u_pass = textBox2.Text;
 
                         MessageBox.Show("Login Successful ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        
-                        if("User" == acctype)
+                        if (ACC.Equals("User"))
                         {
                             this.Hide();
                             UserDashboard udb = new UserDashboard();
                             udb.ShowDialog();
                         }
+                        else if (ACC.Equals("Host"))
+                        {
+                            this.Hide();
+                            HostDashboard hdb = new HostDashboard();
+                            hdb.ShowDialog();
+                        }
                         else
                         {
+                            this.Hide();
                             AppOwnerDashboard apd = new AppOwnerDashboard();
                             apd.ShowDialog();
                         }
-                        
-                        
                     }
                     else
                     {
