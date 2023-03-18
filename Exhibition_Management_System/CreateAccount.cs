@@ -12,6 +12,7 @@ namespace Exhibition_Management_System
 {
     public partial class CreateAccount : Form
     {
+        Boolean ischange = false;
         public CreateAccount()
         {
             InitializeComponent();
@@ -54,7 +55,17 @@ namespace Exhibition_Management_System
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            string email = textBox3.Text;
+            if(email.Contains("@") && email.Contains("."))
+            {
+                lblEmailRight.Visible= true;
+                lblEmailCross.Visible = false;
+            }
+            else
+            {
+                lblEmailCross.Visible = true;
+                lblEmailRight.Visible = false;
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -64,7 +75,16 @@ namespace Exhibition_Management_System
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
+            if(textBox4.Text != textBox2.Text)
+            {
+                lblPassCross.Visible = true;
+                lblPassRight.Visible = false;
+            }
+            else
+            {
+                lblPassCross.Visible = false;
+                lblPassRight.Visible = true;
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -84,7 +104,17 @@ namespace Exhibition_Management_System
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
+            string number = textBox5.Text;
+            if(number.StartsWith("01") && (number.Length == 11))
+            {
+                lblPhnRight.Visible = true;
+                lblPhnCross.Visible = false;
+            }
+            else
+            {
+                lblPhnRight.Visible = false;
+                lblPhnCross.Visible = true;
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -102,6 +132,11 @@ namespace Exhibition_Management_System
             this.Dispose();
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        private void lblRight_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

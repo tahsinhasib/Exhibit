@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPhnCross = new System.Windows.Forms.Label();
+            this.lblEmailCross = new System.Windows.Forms.Label();
+            this.lblPassRight = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -50,6 +53,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblPassCross = new System.Windows.Forms.Label();
+            this.lblEmailRight = new System.Windows.Forms.Label();
+            this.lblPhnRight = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,6 +65,12 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.lblPhnRight);
+            this.panel1.Controls.Add(this.lblEmailRight);
+            this.panel1.Controls.Add(this.lblPassCross);
+            this.panel1.Controls.Add(this.lblPhnCross);
+            this.panel1.Controls.Add(this.lblEmailCross);
+            this.panel1.Controls.Add(this.lblPassRight);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.comboBox2);
@@ -85,6 +97,46 @@
             this.panel1.Size = new System.Drawing.Size(1432, 873);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblPhnCross
+            // 
+            this.lblPhnCross.AutoSize = true;
+            this.lblPhnCross.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhnCross.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPhnCross.ForeColor = System.Drawing.Color.Red;
+            this.lblPhnCross.Location = new System.Drawing.Point(853, 624);
+            this.lblPhnCross.Name = "lblPhnCross";
+            this.lblPhnCross.Size = new System.Drawing.Size(76, 19);
+            this.lblPhnCross.TabIndex = 24;
+            this.lblPhnCross.Text = "❌Invalid";
+            this.lblPhnCross.Visible = false;
+            // 
+            // lblEmailCross
+            // 
+            this.lblEmailCross.AutoSize = true;
+            this.lblEmailCross.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmailCross.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailCross.ForeColor = System.Drawing.Color.Red;
+            this.lblEmailCross.Location = new System.Drawing.Point(853, 389);
+            this.lblEmailCross.Name = "lblEmailCross";
+            this.lblEmailCross.Size = new System.Drawing.Size(76, 19);
+            this.lblEmailCross.TabIndex = 23;
+            this.lblEmailCross.Text = "❌Invalid";
+            this.lblEmailCross.Visible = false;
+            // 
+            // lblPassRight
+            // 
+            this.lblPassRight.AutoSize = true;
+            this.lblPassRight.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassRight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPassRight.ForeColor = System.Drawing.Color.Lime;
+            this.lblPassRight.Location = new System.Drawing.Point(853, 339);
+            this.lblPassRight.Name = "lblPassRight";
+            this.lblPassRight.Size = new System.Drawing.Size(96, 19);
+            this.lblPassRight.TabIndex = 22;
+            this.lblPassRight.Text = "✔ Matched";
+            this.lblPassRight.Visible = false;
+            this.lblPassRight.Click += new System.EventHandler(this.lblRight_Click);
             // 
             // pictureBox3
             // 
@@ -284,7 +336,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(391, 274);
+            this.textBox2.Location = new System.Drawing.Point(391, 275);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(428, 27);
             this.textBox2.TabIndex = 6;
@@ -326,6 +378,45 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter username";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblPassCross
+            // 
+            this.lblPassCross.AutoSize = true;
+            this.lblPassCross.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassCross.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPassCross.ForeColor = System.Drawing.Color.Red;
+            this.lblPassCross.Location = new System.Drawing.Point(853, 341);
+            this.lblPassCross.Name = "lblPassCross";
+            this.lblPassCross.Size = new System.Drawing.Size(76, 19);
+            this.lblPassCross.TabIndex = 25;
+            this.lblPassCross.Text = "❌Invalid";
+            this.lblPassCross.Visible = false;
+            // 
+            // lblEmailRight
+            // 
+            this.lblEmailRight.AutoSize = true;
+            this.lblEmailRight.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmailRight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailRight.ForeColor = System.Drawing.Color.Lime;
+            this.lblEmailRight.Location = new System.Drawing.Point(853, 392);
+            this.lblEmailRight.Name = "lblEmailRight";
+            this.lblEmailRight.Size = new System.Drawing.Size(96, 19);
+            this.lblEmailRight.TabIndex = 26;
+            this.lblEmailRight.Text = "✔ Matched";
+            this.lblEmailRight.Visible = false;
+            // 
+            // lblPhnRight
+            // 
+            this.lblPhnRight.AutoSize = true;
+            this.lblPhnRight.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhnRight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPhnRight.ForeColor = System.Drawing.Color.Lime;
+            this.lblPhnRight.Location = new System.Drawing.Point(853, 626);
+            this.lblPhnRight.Name = "lblPhnRight";
+            this.lblPhnRight.Size = new System.Drawing.Size(96, 19);
+            this.lblPhnRight.TabIndex = 27;
+            this.lblPhnRight.Text = "✔ Matched";
+            this.lblPhnRight.Visible = false;
             // 
             // CreateAccount
             // 
@@ -370,5 +461,11 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Label lblPassRight;
+        private Label lblPhnCross;
+        private Label lblEmailCross;
+        private Label lblPassCross;
+        private Label lblPhnRight;
+        private Label lblEmailRight;
     }
 }
