@@ -119,7 +119,7 @@ namespace Exhibition_Management_System
             }
             catch (Exception)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Invalid Credentials!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
 
             }
             finally

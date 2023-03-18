@@ -19,7 +19,7 @@ namespace Exhibition_Management_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void AppOwnerDashboard_Load(object sender, EventArgs e)
@@ -46,7 +46,19 @@ namespace Exhibition_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             openChildForm(new HostandUserData());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }
