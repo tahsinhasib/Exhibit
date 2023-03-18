@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -137,6 +138,54 @@ namespace Exhibition_Management_System
         private void lblRight_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text != "" && 
+                textBox2.Text != "" && 
+                lblPassRight.Visible == true &&
+                lblEmailRight.Visible == true && 
+                richTextBox1.Text != "" && 
+                lblPhnRight.Visible == true &&
+                comboBox1.SelectedItem != null && 
+                comboBox2.SelectedItem != null)
+            {
+                string uname = textBox1.Text;
+                string password = textBox2.Text;
+                string email = textBox3.Text;
+                string add = richTextBox1.Text;
+                string phone = textBox5.Text; ;
+                string acc = comboBox1.SelectedItem.ToString();
+                string gen = comboBox2.SelectedItem.ToString();
+
+                SqlConnection con = null;
+                try
+                {
+                    con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                    con.Open();
+
+                    string query = "insert into UserDataTable (Username, Password, Phone, Email, Gender, Account, Address) VALUES ('" + uname + "','" + password + "','" + phone + "','" + email + "','" + gen + "','" + acc + "','" + add + "')";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    MessageBox.Show("Succesfully registered!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Fields are empty! or Invalid input", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
