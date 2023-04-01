@@ -16,5 +16,12 @@ namespace Exhibition_Management_System
         {
             InitializeComponent();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+        }
     }
 }
