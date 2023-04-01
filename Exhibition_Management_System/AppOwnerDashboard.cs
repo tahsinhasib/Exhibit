@@ -60,5 +60,15 @@ namespace Exhibition_Management_System
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AdminVenueData());
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

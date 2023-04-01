@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Exhibition_Management_System
 {
-    public partial class UserDashboard : Form
+    public partial class AdminVenueData : Form
     {
-        public UserDashboard()
+        public AdminVenueData()
         {
             InitializeComponent();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login login = new Login();
-            login.ShowDialog();
         }
     }
 }
