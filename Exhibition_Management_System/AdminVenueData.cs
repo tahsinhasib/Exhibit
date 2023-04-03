@@ -20,7 +20,7 @@ namespace Exhibition_Management_System
         }
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
-
+        public string VenID;
         private void AdminVenueData_Load(object sender, EventArgs e)
         {
             GetVenueDataRecord();
@@ -75,6 +75,13 @@ namespace Exhibition_Management_System
             {
                 MessageBox.Show("Fields are empty! or Invalid input", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            VenID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            richTextBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }

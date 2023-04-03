@@ -178,7 +178,9 @@ namespace Exhibition_Management_System
                 {
                     con.Close();
                     MessageBox.Show("Succesfully registered!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    this.Hide();
+                    Login login = new Login();
+                    login.ShowDialog();
                 }
 
             }
