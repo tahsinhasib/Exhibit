@@ -95,7 +95,7 @@
             this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(232, 82);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Feedback";
+            this.button5.Text = "Ratings";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button3

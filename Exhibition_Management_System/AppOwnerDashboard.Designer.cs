@@ -56,9 +56,9 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.Transparent;
-            this.panelChildForm.Location = new System.Drawing.Point(336, 12);
+            this.panelChildForm.Location = new System.Drawing.Point(315, 12);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(990, 580);
+            this.panelChildForm.Size = new System.Drawing.Size(1032, 580);
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
