@@ -87,7 +87,7 @@ namespace Exhibition_Management_System
                         if (ACC.Equals("User"))
                         {
                             this.Hide();
-                            UserDashboard udb = new UserDashboard();
+                            UserDashboard udb = new UserDashboard(u_name);
                             udb.ShowDialog();
                         }
                         else if (ACC.Equals("Host"))

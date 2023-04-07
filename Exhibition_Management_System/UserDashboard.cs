@@ -12,9 +12,11 @@ namespace Exhibition_Management_System
 {
     public partial class UserDashboard : Form
     {
-        public UserDashboard()
+        public UserDashboard(string passedname)
         {
             InitializeComponent();
+            string labelname = passedname;
+            label2.Text= labelname;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -22,6 +24,11 @@ namespace Exhibition_Management_System
             this.Hide();
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        private void UserDashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
