@@ -49,5 +49,28 @@ namespace Exhibition_Management_System
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HUDInsert a = new HUDInsert();
+            a.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HUDRemove b = new HUDRemove();
+            b.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HUDUpdate c = new HUDUpdate();
+            c.ShowDialog();
+        }
     }
 }
