@@ -89,7 +89,7 @@
             this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(232, 79);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Logout";
+            this.button6.Text = "LOGOUT";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -106,7 +106,7 @@
             this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(232, 82);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Reviews";
+            this.button5.Text = "REVIEW";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -123,7 +123,7 @@
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(232, 80);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Transactions";
+            this.button4.Text = "PAYMENTS";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -139,7 +139,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(232, 80);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Venues";
+            this.button3.Text = "VENUES";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -156,7 +156,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(232, 80);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Users";
+            this.button2.Text = "USERS";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -174,7 +174,7 @@
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(232, 80);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Profile";
+            this.button1.Text = "PROFILE";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

@@ -120,7 +120,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(396, 68);
             this.button3.TabIndex = 6;
-            this.button3.Text = " Insert  ";
+            this.button3.Text = " INSERT";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(396, 68);
             this.button2.TabIndex = 5;
-            this.button2.Text = " Update";
+            this.button2.Text = " UPDATE";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
@@ -159,7 +159,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(396, 68);
             this.button1.TabIndex = 4;
-            this.button1.Text = " Delete";
+            this.button1.Text = "DELETE";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;

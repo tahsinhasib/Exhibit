@@ -106,7 +106,7 @@
             this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(232, 71);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Logout";
+            this.button6.Text = "LOGOUT";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -123,7 +123,7 @@
             this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(232, 82);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Ratings";
+            this.button5.Text = "RATINGS";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -139,7 +139,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(232, 80);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Venues";
+            this.button3.Text = "VENUES";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -155,7 +155,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(232, 80);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Find Event";
+            this.button2.Text = "FIND EVENT";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -172,7 +172,7 @@
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(232, 80);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Profile";
+            this.button1.Text = "PROFILE";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1

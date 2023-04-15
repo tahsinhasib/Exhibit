@@ -57,7 +57,7 @@
             this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.Location = new System.Drawing.Point(316, 61);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1023, 742);
+            this.panelChildForm.Size = new System.Drawing.Size(1025, 745);
             this.panelChildForm.TabIndex = 2;
             // 
             // panel2
@@ -86,7 +86,7 @@
             this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(232, 71);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Logout";
+            this.button6.Text = "LOGOUT";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -103,8 +103,9 @@
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(232, 80);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Ongoings";
+            this.button4.Text = "ONGOING";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -119,7 +120,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(232, 80);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Venues";
+            this.button3.Text = "VENUES";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -135,7 +136,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(232, 80);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Add Event";
+            this.button2.Text = "ADD EVENT";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -153,7 +154,7 @@
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(232, 80);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Profile";
+            this.button1.Text = "PROFILE";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // HostDashboard

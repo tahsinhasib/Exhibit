@@ -66,9 +66,9 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(234, 676);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 62);
+            this.button1.Size = new System.Drawing.Size(292, 62);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Start your journey";
+            this.button1.Text = "START YOUR JOURNEY";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -80,9 +80,9 @@
             this.label6.ForeColor = System.Drawing.Color.DarkGreen;
             this.label6.Location = new System.Drawing.Point(1272, 45);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 19);
+            this.label6.Size = new System.Drawing.Size(43, 19);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Exit";
+            this.label6.Text = "EXIT";
             // 
             // label5
             // 
@@ -92,9 +92,9 @@
             this.label5.ForeColor = System.Drawing.Color.DarkGreen;
             this.label5.Location = new System.Drawing.Point(1107, 45);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(71, 19);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Location";
+            this.label5.Text = "SOURCE";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
@@ -105,9 +105,9 @@
             this.label4.ForeColor = System.Drawing.Color.DarkGreen;
             this.label4.Location = new System.Drawing.Point(900, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 19);
+            this.label4.Size = new System.Drawing.Size(130, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Contributors";
+            this.label4.Text = "CONTRIBUTORS";
             // 
             // label3
             // 
@@ -117,9 +117,9 @@
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(732, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 19);
+            this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Location";
+            this.label3.Text = "LOCATION";
             // 
             // label2
             // 

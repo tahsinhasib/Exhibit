@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblPhnRight = new System.Windows.Forms.Label();
             this.lblEmailRight = new System.Windows.Forms.Label();
             this.lblPassCross = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(902, 749);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(321, 672);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 51);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "INSERT";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // lblPhnRight
             // 
@@ -344,19 +357,6 @@
             this.label1.Size = new System.Drawing.Size(170, 27);
             this.label1.TabIndex = 28;
             this.label1.Text = "Enter username";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(321, 672);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 51);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // HUDInsert
             // 

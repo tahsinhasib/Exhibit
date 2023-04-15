@@ -26,7 +26,7 @@ namespace Exhibition_Management_System
 
         private void HostDashboard_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private Form activeForm = null;
@@ -49,6 +49,11 @@ namespace Exhibition_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new HDAddEvent());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OngoingEvents());
         }
     }
 }
