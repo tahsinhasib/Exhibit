@@ -108,13 +108,13 @@ namespace Exhibition_Management_System
                         else if (ACC.Equals("Host"))
                         {
                             this.Hide();
-                            HostDashboard hdb = new HostDashboard();
+                            HostDashboard hdb = new HostDashboard(u_name);
                             hdb.ShowDialog();
                         }
                         else
                         {
                             this.Hide();
-                            AppOwnerDashboard apd = new AppOwnerDashboard();
+                            AppOwnerDashboard apd = new AppOwnerDashboard(u_name);
                             apd.ShowDialog();
                         }
                     }

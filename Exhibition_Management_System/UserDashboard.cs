@@ -13,12 +13,13 @@ namespace Exhibition_Management_System
 {
     public partial class UserDashboard : Form
     {
-        public UserDashboard(string passedname)
+        public UserDashboard(string passedfromlogin)
         {
             InitializeComponent();
-            string labelname = passedname;
+            string labelname = passedfromlogin;
             label2.Text= labelname;
         }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -75,7 +76,8 @@ namespace Exhibition_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openChildForm(new UDRegisteredEvents());
+            string pass1 = label2.Text;
+            openChildForm(new UDRegisteredEvents(pass1));
         }
     }
 }
