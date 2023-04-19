@@ -19,6 +19,7 @@ namespace Exhibition_Management_System
         }
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+        public string VenID;
         private void HDAddEvent_Load(object sender, EventArgs e)
         {
             GetVenueRecord();
@@ -26,7 +27,7 @@ namespace Exhibition_Management_System
 
         private void GetVenueRecord()
         {
-            SqlCommand cmd = new SqlCommand("select VenueName from VenueDataTable", con);
+            SqlCommand cmd = new SqlCommand("select * from VenueDataTable", con);
 
             DataTable dt = new DataTable();
 
@@ -37,6 +38,77 @@ namespace Exhibition_Management_System
             con.Close();
 
             dataGridView1.DataSource = dt;
+        }
+
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" &&
+                textBox2.Text != "" &&
+                textBox3.Text != "" &&
+                textBox4.Text != "" &&
+                textBox5.Text != "" &&
+                comboBox1.SelectedItem != null &&
+                comboBox2.SelectedItem != null &&
+                comboBox3.SelectedItem != null)
+            {
+                string venid = textBox1.Text;
+                string venname = textBox2.Text;
+                string evname = textBox3.Text;
+                string fees = textBox4.Text;
+                string evdate = textBox5.Text;
+                string time = comboBox1.SelectedItem.ToString();
+                string food = comboBox2.SelectedItem.ToString();
+                string cap = comboBox3.SelectedItem.ToString();
+
+                SqlConnection con = null;
+                try
+                {
+                    con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                    con.Open();
+
+                    string query = "insert into EventDataTable (VenueID, VenueName, Event, Fees, Date, Time, Snacks, Capacity) VALUES ('" + venid + "','" + venname + "','" + evname + "','" + fees + "','" + evdate + "','" + time + "','" + food + "','" + cap + "')";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    MessageBox.Show("Event planned!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    textBox5.Clear();
+                    comboBox1.Items.Clear();
+                    comboBox2.Items.Clear();
+                    comboBox3.Items.Clear();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Fields are empty! or Invalid input", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBox5.Text = monthCalendar1.SelectionStart.ToString("dd/MM/yyyy");
+            textBox5.SelectionStart = textBox5.Text.Length;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            VenID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         //textBox5.Text = monthCalendar1.SelectionStart.ToShortDateString();
