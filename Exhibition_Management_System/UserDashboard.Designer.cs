@@ -122,11 +122,12 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(5, 222);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(232, 393);
+            this.panel2.Size = new System.Drawing.Size(232, 407);
             this.panel2.TabIndex = 1;
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.AliceBlue;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,14 +137,15 @@
             this.button6.Location = new System.Drawing.Point(0, 322);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(232, 71);
+            this.button6.Size = new System.Drawing.Size(232, 85);
             this.button6.TabIndex = 5;
             this.button6.Text = "LOGOUT";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.AliceBlue;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,10 +158,11 @@
             this.button5.Size = new System.Drawing.Size(232, 82);
             this.button5.TabIndex = 4;
             this.button5.Text = "RATINGS";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.AliceBlue;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -172,10 +175,11 @@
             this.button3.Size = new System.Drawing.Size(232, 80);
             this.button3.TabIndex = 2;
             this.button3.Text = "VENUES";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.AliceBlue;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -188,11 +192,12 @@
             this.button2.Size = new System.Drawing.Size(232, 80);
             this.button2.TabIndex = 1;
             this.button2.Text = "FIND EVENT";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.AliceBlue;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -206,7 +211,7 @@
             this.button1.Size = new System.Drawing.Size(232, 80);
             this.button1.TabIndex = 0;
             this.button1.Text = "PROFILE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // UserDashboard
             // 

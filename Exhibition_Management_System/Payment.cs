@@ -11,22 +11,16 @@ using System.Windows.Forms;
 
 namespace Exhibition_Management_System
 {
-    public partial class FindEvent : Form
+    public partial class Payment : Form
     {
-        public FindEvent()
+        public Payment()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Payment_Load(object sender, EventArgs e)
         {
-            Payment payment = new Payment();
-            payment.ShowDialog();
-        }
-
-        private void FindEvent_Load(object sender, EventArgs e)
-        {
-            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -39,5 +33,7 @@ namespace Exhibition_Management_System
             int nWidthEllipse,
             int nHeightEllipse
         );
+
+
     }
 }
