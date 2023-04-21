@@ -71,7 +71,8 @@ namespace Exhibition_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new FindEvent());
+            string pass1 = label2.Text;
+            openChildForm(new FindEvent(pass1));
         }
 
         private void button3_Click(object sender, EventArgs e)

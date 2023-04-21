@@ -15,9 +15,11 @@ namespace Exhibition_Management_System
 {
     public partial class FindEvent : Form
     {
-        public FindEvent()
+        public string pass2;
+        public FindEvent(string recievepass1)
         {
             InitializeComponent();
+            pass2 = recievepass1;
         }
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
@@ -116,6 +118,7 @@ namespace Exhibition_Management_System
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox4.Text = pass2;
             textBox5.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             textBox7.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
