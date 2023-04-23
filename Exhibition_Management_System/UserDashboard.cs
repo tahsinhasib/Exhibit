@@ -80,5 +80,10 @@ namespace Exhibition_Management_System
             string pass1 = label2.Text;
             openChildForm(new UDRegisteredEvents(pass1));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

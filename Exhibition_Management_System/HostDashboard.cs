@@ -13,11 +13,12 @@ namespace Exhibition_Management_System
 {
     public partial class HostDashboard : Form
     {
+        public string temp;
         public HostDashboard(string passedfromlogin)
         {
             InitializeComponent();
-            string labelname = passedfromlogin;
-            label2.Text = labelname;
+            temp = passedfromlogin;
+            label2.Text = temp;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -79,6 +80,11 @@ namespace Exhibition_Management_System
         private void button3_Click(object sender, EventArgs e)
         {
             openChildForm(new HDVenues());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new HostProfile(temp));
         }
     }
 }
