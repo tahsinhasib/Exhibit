@@ -13,11 +13,12 @@ namespace Exhibition_Management_System
 {
     public partial class AppOwnerDashboard : Form
     {
+        public string temp;
         public AppOwnerDashboard(string passedfromlogin)
         {
             InitializeComponent();
-            string labelname = passedfromlogin;
-            label2.Text = labelname;
+            temp = passedfromlogin;
+            label2.Text = temp;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace Exhibition_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new AdminProfile(temp));
         }
 
         private void button2_Click(object sender, EventArgs e)
