@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
@@ -62,24 +61,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MintCream;
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(1, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(266, 85);
             this.panel3.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(89, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "WELCOME";
             // 
             // pictureBox1
             // 
@@ -98,7 +85,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(89, 40);
+            this.label2.Location = new System.Drawing.Point(79, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 27);
             this.label2.TabIndex = 3;
@@ -252,6 +239,5 @@
         private PictureBox pictureBox1;
         private Panel panelChildForm;
         private Panel panel3;
-        private Label label1;
     }
 }
