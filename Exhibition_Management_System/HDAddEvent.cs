@@ -126,6 +126,6 @@ namespace Exhibition_Management_System
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
 
-        //textBox5.Text = monthCalendar1.SelectionStart.ToShortDateString();
+
     }
 }

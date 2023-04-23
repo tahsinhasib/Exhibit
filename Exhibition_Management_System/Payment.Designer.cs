@@ -94,6 +94,7 @@
             this.button1.TabIndex = 52;
             this.button1.Text = "PAY NOW";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -159,6 +160,7 @@
             this.monthCalendar1.Location = new System.Drawing.Point(16, 413);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 13;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // label11
             // 

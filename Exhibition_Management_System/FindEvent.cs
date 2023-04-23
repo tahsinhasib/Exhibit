@@ -26,6 +26,38 @@ namespace Exhibition_Management_System
         public string VenID;
         private void button1_Click(object sender, EventArgs e)
         {
+            if(textBox1.Text != "" &&
+                textBox2.Text != "" &&
+                textBox3.Text != "" &&
+                textBox4.Text != "" &&
+                textBox5.Text != "" &&
+                textBox6.Text != "" &&
+                textBox7.Text != "")
+            {
+                string venid = textBox1.Text;
+                string venname = textBox2.Text;
+                string evname = textBox3.Text;
+                string username = textBox4.Text;
+                string fees = textBox5.Text;
+                string date = textBox6.Text;
+                string time = textBox7.Text;
+
+                Payment payment = new Payment(venid, venname, evname, username, fees, date, time);
+                payment.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Fields are empty! or Invalid input", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+
+            /*
             if (textBox1.Text != "" &&
                 textBox2.Text != "" &&
                 textBox3.Text != "" &&
@@ -60,6 +92,8 @@ namespace Exhibition_Management_System
                 }
                 finally
                 {
+                    Payment payment = new Payment(pass2);
+                    payment.ShowDialog();
                     con.Close();
                     MessageBox.Show("Event planned!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBox1.Clear();
@@ -77,6 +111,7 @@ namespace Exhibition_Management_System
             {
                 MessageBox.Show("Fields are empty! or Invalid input", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
+            */
         }
 
         private void FindEvent_Load(object sender, EventArgs e)
