@@ -86,5 +86,10 @@ namespace Exhibition_Management_System
         {
             openChildForm(new UserProfile(temp));
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openChildForm(new UDRatings(temp));
+        }
     }
 }

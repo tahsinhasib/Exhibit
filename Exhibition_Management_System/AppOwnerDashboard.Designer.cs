@@ -207,9 +207,9 @@
             this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(1, 26);
+            this.panel3.Location = new System.Drawing.Point(3, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 85);
+            this.panel3.Size = new System.Drawing.Size(232, 85);
             this.panel3.TabIndex = 6;
             // 
             // pictureBox1

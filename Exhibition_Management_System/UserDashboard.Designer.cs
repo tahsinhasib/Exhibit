@@ -63,9 +63,9 @@
             this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(1, 26);
+            this.panel3.Location = new System.Drawing.Point(5, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 85);
+            this.panel3.Size = new System.Drawing.Size(232, 85);
             this.panel3.TabIndex = 5;
             // 
             // pictureBox1
@@ -94,6 +94,8 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
+            this.panelChildForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelChildForm.BackgroundImage")));
+            this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChildForm.Location = new System.Drawing.Point(316, 61);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1025, 745);
@@ -117,6 +119,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -136,6 +139,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -148,12 +152,14 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "RATINGS";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -173,6 +179,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -193,6 +200,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;

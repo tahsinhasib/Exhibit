@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Exhibition_Management_System
@@ -44,7 +45,7 @@ namespace Exhibition_Management_System
 
         private void GetVenueDataRecord()
         {
-            SqlCommand cmd = new SqlCommand("select * from VenueDataTable", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM VenueDataTable", con);
 
             DataTable dt = new DataTable();
 
@@ -71,7 +72,7 @@ namespace Exhibition_Management_System
                     con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
                     con.Open();
 
-                    string query = "insert into VenueDataTable (VenueID, VenueName) VALUES ('" + id + "','" + name + "')";
+                    string query = "INSERT INTO VenueDataTable (VenueID, VenueName) VALUES ('" + id + "','" + name + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
 
@@ -84,7 +85,9 @@ namespace Exhibition_Management_System
                 {
                     con.Close();
                     MessageBox.Show("Succesfully registered!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    GetVenueDataRecord();
+                    richTextBox1.Clear();
+                    richTextBox2.Clear();
                 }
             }
             else
@@ -102,7 +105,79 @@ namespace Exhibition_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(richTextBox1.Text != "" &&
+                richTextBox2.Text != "") 
+            {
+                string venid = richTextBox1.Text;
+                try
+                {
+                    con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                    con.Open();
 
+                    string query = "UPDATE VenueDataTable SET VenueName = @VenueName WHERE VenueID = '" + venid + "'";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@VenueName", richTextBox2.Text);
+                        cmd.Parameters.AddWithValue("@VenueID", venid);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    MessageBox.Show("Venue updated!", "Updated!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Close();
+                    GetVenueDataRecord();
+                    richTextBox1.Clear();
+                    richTextBox2.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select to update information!", "Select", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text != "" &&
+                richTextBox2.Text != "")
+            {
+                string venid = richTextBox1.Text;
+                try
+                {
+                    con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                    con.Open();
+
+                    string query = "DELETE FROM VenueDataTable WHERE VenueID = '" + venid + "'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Venue deleted!", "Deleted!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Close();
+                    GetVenueDataRecord();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select to delete information!", "Select", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            richTextBox2.Clear();
+            GetVenueDataRecord();
         }
     }
 }

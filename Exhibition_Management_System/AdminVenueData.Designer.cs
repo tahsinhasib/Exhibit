@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,7 +45,10 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -51,12 +57,49 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(572, 529);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(264, 464);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 53);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 54);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(72, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(353, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "CLICK ON A VENUE TO NAVIGATE";
             // 
             // dataGridView1
             // 
@@ -82,12 +125,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 505);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 384);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -174,6 +217,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // richTextBox2
             // 
@@ -213,6 +257,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Venue ID";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(241, 520);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 27);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "REFRESH";
+            // 
             // AdminVenueData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -225,6 +281,9 @@
             this.Text = "AdminVenueData";
             this.Load += new System.EventHandler(this.AdminVenueData_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -246,5 +305,9 @@
         private Button button3;
         private Button button2;
         private Panel panel3;
+        private PictureBox pictureBox1;
+        private Label label3;
+        private PictureBox pictureBox2;
+        private Label label4;
     }
 }

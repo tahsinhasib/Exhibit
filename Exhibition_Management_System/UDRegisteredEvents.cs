@@ -30,7 +30,7 @@ namespace Exhibition_Management_System
 
         private void GetRegisteredEventsData()
         {
-            SqlCommand cmd = new SqlCommand("select * from RegisteredEventsDataTable where Username = @Username", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM RegisteredEventsDataTable WHERE Username = @Username", con);
             cmd.Parameters.AddWithValue("@Username", pass2);
 
             DataTable dt = new DataTable();
