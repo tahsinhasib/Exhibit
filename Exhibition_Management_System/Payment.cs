@@ -48,8 +48,6 @@ namespace Exhibition_Management_System
            
             InitializeComponent();
 
-            textBox2.Focus();
-
             textBox4.Text = fees;
             textBox5.Text = "500";
 
@@ -67,6 +65,33 @@ namespace Exhibition_Management_System
                 TOTAL = result.ToString();
                 textBox6.Text = TOTAL.ToString();
             }
+
+
+            SqlConnection con = null;
+
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                con.Open();
+
+                string query1 = "SELECT Email FROM UserDataTable WHERE Username = '" + username + "'";
+                SqlCommand cmd1 = new SqlCommand(query1, con);
+                DataSet ds1 = new DataSet();
+                SqlDataAdapter adp1 = new SqlDataAdapter(cmd1);
+                adp1.Fill(ds1);
+                DataTable dt1 = ds1.Tables[0];
+                string Email = dt1.Rows[0]["Email"].ToString();
+                textBox1.Text = Email;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                con.Close();
+            } 
 
         }
 
@@ -121,7 +146,7 @@ namespace Exhibition_Management_System
                 {
                     con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
                     con.Open();
-                    string query = "insert into RegisteredEventsDataTable (VenueID, VenueName, Event, Username, Fees, Date, Time) VALUES ('" + venid + "','" + venname + "','" + evname + "','" + username + "','" + fees + "','" + date + "','" + time + "')";
+                    string query = "INSERT INTO RegisteredEventsDataTable (VenueID, VenueName, Event, Username, Fees, Date, Time) VALUES ('" + venid + "','" + venname + "','" + evname + "','" + username + "','" + fees + "','" + date + "','" + time + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
 
@@ -136,6 +161,29 @@ namespace Exhibition_Management_System
                     MessageBox.Show("Event planned!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Hide();
+
+
+                //for storing into PaymentTable
+                SqlConnection con2 = null;
+                try
+                {
+                    con2 = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                    con2.Open();
+                    string query2 = "INSERT INTO PaymentTable (Username, Email, Venue, Event, Date, Amount, Card, Holder) VALUES ('" + username + "','" + textBox1.Text + "','" + venname + "','" + evname + "','" + textBox7.Text + "','" + textBox6.Text + "','" + textBox2.Text + "','" + textBox3.Text + "')";
+                    SqlCommand cmd2 = new SqlCommand(query2, con2);
+                    cmd2.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con2.Close();
+                    MessageBox.Show("Thank you for your payment!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Hide();
             }
             else
             {
@@ -148,6 +196,21 @@ namespace Exhibition_Management_System
         {
             textBox7.Text = monthCalendar1.SelectionStart.ToString("dd/MM/yyyy");
             textBox7.SelectionStart = textBox7.Text.Length;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

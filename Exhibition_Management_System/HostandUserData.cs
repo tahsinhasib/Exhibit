@@ -32,7 +32,7 @@ namespace Exhibition_Management_System
 
         private void GetostandUserDataRecord()
         {
-            SqlCommand cmd = new SqlCommand("select * from UserDataTable", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM UserDataTable", con);
 
             DataTable dt = new DataTable();
 
