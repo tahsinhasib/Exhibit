@@ -166,6 +166,7 @@
             this.ClientSize = new System.Drawing.Size(1035, 617);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HUDRemove";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HUDRemove";

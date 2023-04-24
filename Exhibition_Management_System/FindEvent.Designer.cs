@@ -322,6 +322,7 @@
             this.ClientSize = new System.Drawing.Size(1003, 694);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FindEvent";
             this.Text = "FindEvent";
             this.Load += new System.EventHandler(this.FindEvent_Load);
