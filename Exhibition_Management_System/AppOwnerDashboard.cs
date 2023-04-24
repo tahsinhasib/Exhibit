@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -19,11 +20,77 @@ namespace Exhibition_Management_System
             InitializeComponent();
             temp = passedfromlogin;
             label2.Text = temp;
+
+            CountVenues();
+            CountEvents();
+            CountHosts();
+            CountGuests();
+            CountEarnings();
         }
+
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+
+        private void CountVenues()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM VenueDataTable", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            label7.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+        private void CountEvents()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM EventDataTable", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            label8.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        private void CountHosts()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM UserDataTable WHERE Account = '" + "Host" + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            label9.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+        private void CountGuests()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM UserDataTable WHERE Account = '" + "User" + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            label10.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        private void CountEarnings()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT SUM(CONVERT(decimal(10,2), Amount)) AS TotalMoney FROM PaymentTable", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            label11.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        public void RefreshLables()
+        {
+            CountVenues();
+            CountEvents();
+            CountHosts();
+            CountGuests();
+            CountEarnings();
+        }
+
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new AdminReview());
         }
 
         private void AppOwnerDashboard_Load(object sender, EventArgs e)
@@ -97,6 +164,16 @@ namespace Exhibition_Management_System
         private void button4_Click(object sender, EventArgs e)
         {
             openChildForm(new AdminPayment());
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            RefreshLables();
         }
     }
 }

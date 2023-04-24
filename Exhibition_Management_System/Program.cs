@@ -12,8 +12,6 @@ namespace Exhibition_Management_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-            //Application.Run(new Login());
-            //Application.Run(new AppOwnerDashboard());
         }
     }
 }
