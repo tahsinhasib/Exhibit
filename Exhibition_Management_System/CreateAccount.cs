@@ -60,7 +60,7 @@ namespace Exhibition_Management_System
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {

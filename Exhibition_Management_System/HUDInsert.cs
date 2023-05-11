@@ -20,6 +20,8 @@ namespace Exhibition_Management_System
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+
         private void HUDInsert_Load(object sender, EventArgs e)
         {
             button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
@@ -83,6 +85,7 @@ namespace Exhibition_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" &&
+                lblUNTick.Visible == true &&
                 textBox2.Text != "" &&
                 lblPassRight.Visible == true &&
                 lblEmailRight.Visible == true &&
@@ -125,6 +128,38 @@ namespace Exhibition_Management_System
             else
             {
                 MessageBox.Show("Fields are empty! or Invalid input", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query2 = "SELECT COUNT(*) FROM UserDataTable WHERE Username = @username";
+                SqlCommand cmd2 = new SqlCommand(query2, con);
+                cmd2.Parameters.AddWithValue("@username", textBox1.Text);
+
+                int count = (int)cmd2.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    lblUNcross.Visible = true;
+                    lblUNTick.Visible = false;
+                }
+                else
+                {
+                    lblUNTick.Visible = true;
+                    lblUNcross.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

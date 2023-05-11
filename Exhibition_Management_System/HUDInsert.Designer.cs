@@ -55,6 +55,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblUNTick = new System.Windows.Forms.Label();
+            this.lblUNcross = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +64,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.lblUNcross);
+            this.panel1.Controls.Add(this.lblUNTick);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
@@ -380,6 +384,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(428, 27);
             this.textBox1.TabIndex = 29;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -393,6 +398,32 @@
             this.label1.Size = new System.Drawing.Size(170, 27);
             this.label1.TabIndex = 28;
             this.label1.Text = "Enter username";
+            // 
+            // lblUNTick
+            // 
+            this.lblUNTick.AutoSize = true;
+            this.lblUNTick.BackColor = System.Drawing.Color.Transparent;
+            this.lblUNTick.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUNTick.ForeColor = System.Drawing.Color.Lime;
+            this.lblUNTick.Location = new System.Drawing.Point(783, 80);
+            this.lblUNTick.Name = "lblUNTick";
+            this.lblUNTick.Size = new System.Drawing.Size(98, 19);
+            this.lblUNTick.TabIndex = 53;
+            this.lblUNTick.Text = "✔ Available";
+            this.lblUNTick.Visible = false;
+            // 
+            // lblUNcross
+            // 
+            this.lblUNcross.AutoSize = true;
+            this.lblUNcross.BackColor = System.Drawing.Color.Transparent;
+            this.lblUNcross.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUNcross.ForeColor = System.Drawing.Color.Red;
+            this.lblUNcross.Location = new System.Drawing.Point(783, 80);
+            this.lblUNcross.Name = "lblUNcross";
+            this.lblUNcross.Size = new System.Drawing.Size(118, 19);
+            this.lblUNcross.TabIndex = 54;
+            this.lblUNcross.Text = "❌ Unavailable";
+            this.lblUNcross.Visible = false;
             // 
             // HUDInsert
             // 
@@ -442,5 +473,7 @@
         private Button button1;
         private Label label8;
         private PictureBox pictureBox1;
+        private Label lblUNTick;
+        private Label lblUNcross;
     }
 }
