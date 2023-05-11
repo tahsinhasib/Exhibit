@@ -19,6 +19,8 @@ namespace Exhibition_Management_System
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+
         private void CreateAccount_Load(object sender, EventArgs e)
         {
 
@@ -36,6 +38,34 @@ namespace Exhibition_Management_System
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                con.Open();
+                string query2 = "SELECT COUNT(*) FROM UserDataTable WHERE Username = @username";
+                SqlCommand cmd2 = new SqlCommand(query2, con);
+                cmd2.Parameters.AddWithValue("@username", textBox1.Text);
+
+                int count = (int)cmd2.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    lblUNcross.Visible = true;
+                    lblUNTick.Visible = false;
+                }
+                else
+                {
+                    lblUNTick.Visible = true;
+                    lblUNcross.Visible = false;
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
 
         }
 
@@ -143,6 +173,7 @@ namespace Exhibition_Management_System
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             if(textBox1.Text != "" && 
+                lblUNTick.Visible == true &&
                 textBox2.Text != "" && 
                 lblPassRight.Visible == true &&
                 lblEmailRight.Visible == true && 

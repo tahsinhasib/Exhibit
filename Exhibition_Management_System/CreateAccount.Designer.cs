@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUNTick = new System.Windows.Forms.Label();
+            this.lblUNcross = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lblPhnRight = new System.Windows.Forms.Label();
             this.lblEmailRight = new System.Windows.Forms.Label();
@@ -66,6 +68,8 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.lblUNTick);
+            this.panel1.Controls.Add(this.lblUNcross);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.lblPhnRight);
             this.panel1.Controls.Add(this.lblEmailRight);
@@ -100,6 +104,32 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lblUNTick
+            // 
+            this.lblUNTick.AutoSize = true;
+            this.lblUNTick.BackColor = System.Drawing.Color.Transparent;
+            this.lblUNTick.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUNTick.ForeColor = System.Drawing.Color.Green;
+            this.lblUNTick.Location = new System.Drawing.Point(857, 219);
+            this.lblUNTick.Name = "lblUNTick";
+            this.lblUNTick.Size = new System.Drawing.Size(98, 19);
+            this.lblUNTick.TabIndex = 30;
+            this.lblUNTick.Text = "✔ Available";
+            this.lblUNTick.Visible = false;
+            // 
+            // lblUNcross
+            // 
+            this.lblUNcross.AutoSize = true;
+            this.lblUNcross.BackColor = System.Drawing.Color.Transparent;
+            this.lblUNcross.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUNcross.ForeColor = System.Drawing.Color.Red;
+            this.lblUNcross.Location = new System.Drawing.Point(853, 219);
+            this.lblUNcross.Name = "lblUNcross";
+            this.lblUNcross.Size = new System.Drawing.Size(118, 19);
+            this.lblUNcross.TabIndex = 29;
+            this.lblUNcross.Text = "❌ Unavailable";
+            this.lblUNcross.Visible = false;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -119,7 +149,7 @@
             this.lblPhnRight.AutoSize = true;
             this.lblPhnRight.BackColor = System.Drawing.Color.Transparent;
             this.lblPhnRight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPhnRight.ForeColor = System.Drawing.Color.Lime;
+            this.lblPhnRight.ForeColor = System.Drawing.Color.Green;
             this.lblPhnRight.Location = new System.Drawing.Point(853, 626);
             this.lblPhnRight.Name = "lblPhnRight";
             this.lblPhnRight.Size = new System.Drawing.Size(96, 19);
@@ -132,7 +162,7 @@
             this.lblEmailRight.AutoSize = true;
             this.lblEmailRight.BackColor = System.Drawing.Color.Transparent;
             this.lblEmailRight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmailRight.ForeColor = System.Drawing.Color.Lime;
+            this.lblEmailRight.ForeColor = System.Drawing.Color.Green;
             this.lblEmailRight.Location = new System.Drawing.Point(853, 392);
             this.lblEmailRight.Name = "lblEmailRight";
             this.lblEmailRight.Size = new System.Drawing.Size(96, 19);
@@ -184,7 +214,7 @@
             this.lblPassRight.AutoSize = true;
             this.lblPassRight.BackColor = System.Drawing.Color.Transparent;
             this.lblPassRight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPassRight.ForeColor = System.Drawing.Color.Lime;
+            this.lblPassRight.ForeColor = System.Drawing.Color.Green;
             this.lblPassRight.Location = new System.Drawing.Point(853, 339);
             this.lblPassRight.Name = "lblPassRight";
             this.lblPassRight.Size = new System.Drawing.Size(96, 19);
@@ -488,5 +518,7 @@
         private Label lblPhnRight;
         private Label lblEmailRight;
         private CheckBox checkBox1;
+        private Label lblUNTick;
+        private Label lblUNcross;
     }
 }
