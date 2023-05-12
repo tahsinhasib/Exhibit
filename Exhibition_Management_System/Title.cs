@@ -28,5 +28,10 @@ namespace Exhibition_Management_System
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void Title_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

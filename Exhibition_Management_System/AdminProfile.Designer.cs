@@ -162,6 +162,7 @@
             this.label9.Size = new System.Drawing.Size(97, 27);
             this.label9.TabIndex = 5;
             this.label9.Text = "PHONE :";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 

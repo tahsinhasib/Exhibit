@@ -102,5 +102,10 @@ namespace Exhibition_Management_System
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
