@@ -103,6 +103,11 @@ namespace Exhibition_Management_System
             button6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button6.Width, button6.Height, 40, 40));
 
             panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 40, 40));
+            panel4.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 40, 40));
+            panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel4.Height, 40, 40));
+            panel6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel6.Width, panel4.Height, 40, 40));
+            panel7.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel7.Width, panel4.Height, 40, 40));
+            panel8.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel8.Width, panel4.Height, 20, 20));
         }
 
 

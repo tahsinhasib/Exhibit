@@ -6,12 +6,12 @@ namespace Exhibition_Management_System
 {
     public partial class Login : Form
     {
-        
-
         public Login()
         {
             InitializeComponent();
         }
+
+       
 
         //Setting up SQL connection
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
@@ -48,8 +48,13 @@ namespace Exhibition_Management_System
 
         private void Login_Load(object sender, EventArgs e)
         {
+            // Sets the value for roundness
             button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
             button2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button2.Width, button2.Height, 40, 40));
+            button3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button3.Width, button3.Height, 40, 40));
+            panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 40, 40));
+
+
 
         }
 
@@ -175,6 +180,12 @@ namespace Exhibition_Management_System
             {
                 textBox2.UseSystemPasswordChar = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ForgetPassword fgp = new ForgetPassword();
+            fgp.ShowDialog();
         }
     }
 }
