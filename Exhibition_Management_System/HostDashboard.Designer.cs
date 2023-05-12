@@ -53,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,7 +66,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.panelChildForm);
-            this.panel5.Location = new System.Drawing.Point(325, 38);
+            this.panel5.Location = new System.Drawing.Point(325, 16);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1081, 808);
             this.panel5.TabIndex = 4;
@@ -84,9 +85,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.panel2);
-            this.panel4.Location = new System.Drawing.Point(-52, 170);
+            this.panel4.Location = new System.Drawing.Point(13, 174);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(332, 588);
+            this.panel4.Size = new System.Drawing.Size(285, 588);
             this.panel4.TabIndex = 3;
             // 
             // panel2
@@ -97,7 +98,7 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(54, 68);
+            this.panel2.Location = new System.Drawing.Point(23, 68);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(232, 452);
             this.panel2.TabIndex = 1;
@@ -208,9 +209,9 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(-22, 27);
+            this.panel3.Location = new System.Drawing.Point(13, 16);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(302, 79);
+            this.panel3.Size = new System.Drawing.Size(285, 79);
             this.panel3.TabIndex = 7;
             // 
             // pictureBox1
@@ -241,7 +242,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 869);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
