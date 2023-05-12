@@ -39,6 +39,8 @@ namespace Exhibition_Management_System
 
             panelChildForm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelChildForm.Width, panelChildForm.Height, 40, 40));
             panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 40, 40));
+            panel4.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 40, 40));
+            panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 40, 40));
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]

@@ -118,6 +118,8 @@ namespace Exhibition_Management_System
         {
             button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
 
+            panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 40, 40));
+
             GetOngoingEventsRecord();
         }
 
