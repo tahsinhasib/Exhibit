@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Exhibition_Management_System
 {
@@ -22,6 +13,7 @@ namespace Exhibition_Management_System
             InitializeComponent();
         }
 
+        //Setting up SQL connection
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,6 +35,7 @@ namespace Exhibition_Management_System
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            // Works as a button that takes to title page
             this.Dispose();
             Title title = new Title();
             title.ShowDialog();
@@ -73,6 +66,8 @@ namespace Exhibition_Management_System
          * 
          * The IntPtr return type indicates that the method returns a handle to the region that is created, 
          * which can be used in other GDI functions to manipulate the region.
+         * 
+         * Responsible for making the outlines rounded for buttons and panels.
          */
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -89,9 +84,9 @@ namespace Exhibition_Management_System
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            String u_name;
-            String u_pass;
-            String ACC;
+            String u_name;      // Stores the username provided in the textbox
+            String u_pass;      // Stores the user password provided in the textbox
+            String ACC;         // The type which takes a user to different dashboard
 
             try
             {
@@ -104,10 +99,15 @@ namespace Exhibition_Management_System
                 SqlDataAdapter sda2 = new SqlDataAdapter(query2, con);
                 DataTable dtable2 = new DataTable();
                 sda.Fill(dtable2);
+
                 ACC = dtable2.Rows[0]["Account"].ToString();                //this one determines wether to launch user or host dashboard
 
+                // If the textboxes are not empty
                 if (textBox1.Text != "" || textBox2.Text != "")
                 {
+                    /* The conditional expression dtable.Rows.Count > 0 evaluates to true if there 
+                     * is at least one row in the dtable, and false if there are no rows.
+                     */
                     if (dtable.Rows.Count > 0)
                     {
                         u_name = textBox1.Text;
@@ -116,18 +116,21 @@ namespace Exhibition_Management_System
                         MessageBox.Show("Login Successful ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         if (ACC.Equals("User"))
                         {
+                            //Takes the person to User Dashboard
                             this.Hide();
                             UserDashboard udb = new UserDashboard(u_name);
                             udb.ShowDialog();
                         }
                         else if (ACC.Equals("Host"))
                         {
+                            //Takes the person to Host Dashboard
                             this.Hide();
                             HostDashboard hdb = new HostDashboard(u_name);
                             hdb.ShowDialog();
                         }
                         else
                         {
+                            //Takes the person to Admin Dashboard
                             this.Hide();
                             AppOwnerDashboard apd = new AppOwnerDashboard(u_name);
                             apd.ShowDialog();
@@ -136,19 +139,22 @@ namespace Exhibition_Management_System
                     else
                     {
                         MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                        
+                        //Clears the textbox and places the cursor on textbox1 for reuse
                         textBox1.Clear();
                         textBox2.Clear();
-
                         textBox1.Focus();
                     }
                 }
                 else
                 {
+                    //Displays the message if fields are empty, any one of them
                     MessageBox.Show("Fields are empty!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception)
             {
+                //Anything other than fields are empty, can be a mix of empty and filled
                 MessageBox.Show("Invalid Credentials!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
             finally
@@ -160,6 +166,7 @@ namespace Exhibition_Management_System
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            // This line of code enables the user to show password and hide password
             if(checkBox1.Checked == true)
             {
                 textBox2.UseSystemPasswordChar = false;
