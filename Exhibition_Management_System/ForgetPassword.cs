@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
+﻿using System.Data.SqlClient;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Exhibition_Management_System
 {
@@ -74,6 +65,77 @@ namespace Exhibition_Management_System
             finally
             {
                 con.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(accfound.Visible == true &&
+                lblmatched.Visible == true &&
+                textBox1.Text != "" &&
+                textBox2.Text != "" &&
+                textBox3.Text != "")
+            {
+                string update = textBox1.Text;
+                try
+                {
+                    con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+                    con.Open();
+
+                    string query = "UPDATE UserDataTable SET Password = @Password WHERE Username = @Username";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Password", textBox3.Text);
+                        cmd.Parameters.AddWithValue("@Username", update);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    MessageBox.Show("Password updated!", "Updated!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Close();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                //Anything other than fields are empty, can be a mix of empty and filled
+                MessageBox.Show("Invalid Credentials!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox3.Text != textBox2.Text)
+            {
+                lblnotmatched.Visible = true;
+                lblmatched.Visible = false;
+            }
+            else
+            {
+                lblnotmatched.Visible = false;
+                lblmatched.Visible = true;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            // This line of code enables the user to show password and hide password
+            if (checkBox1.Checked == true)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                textBox3.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+                textBox3.UseSystemPasswordChar = true;
             }
         }
     }

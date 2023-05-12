@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,6 +78,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblnotmatched);
             this.panel2.Controls.Add(this.lblmatched);
@@ -172,6 +174,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "CHANGE PASSWORD";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
@@ -181,6 +184,7 @@
             this.textBox3.Size = new System.Drawing.Size(390, 27);
             this.textBox3.TabIndex = 16;
             this.textBox3.UseSystemPasswordChar = true;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label1
             // 
@@ -252,6 +256,20 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Forgot Password? Reset your password\r\n";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.checkBox1.Location = new System.Drawing.Point(762, 369);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(73, 23);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "Show";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // ForgetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -290,5 +308,6 @@
         private Label lblmatched;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private CheckBox checkBox1;
     }
 }

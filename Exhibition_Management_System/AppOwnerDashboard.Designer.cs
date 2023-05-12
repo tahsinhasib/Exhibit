@@ -163,7 +163,7 @@
             this.panel4.Controls.Add(this.pictureBox7);
             this.panel4.Location = new System.Drawing.Point(-68, 153);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(354, 588);
+            this.panel4.Size = new System.Drawing.Size(332, 588);
             this.panel4.TabIndex = 0;
             // 
             // panel2
@@ -473,9 +473,9 @@
             this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(3, 26);
+            this.panel3.Location = new System.Drawing.Point(-17, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(232, 85);
+            this.panel3.Size = new System.Drawing.Size(303, 77);
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -483,7 +483,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 54);
             this.pictureBox1.TabIndex = 2;
@@ -496,7 +496,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(91, 25);
+            this.label2.Location = new System.Drawing.Point(112, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 27);
             this.label2.TabIndex = 3;
