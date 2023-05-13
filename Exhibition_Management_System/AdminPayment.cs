@@ -18,10 +18,12 @@ namespace Exhibition_Management_System
             InitializeComponent();
         }
 
+        // Setting up SQL connection
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
 
         private void AdminPayment_Load(object sender, EventArgs e)
         {
+            // This method returns all the data which are present in the database "PaymentTable"
             GetPaymentRecord();
         }
 
@@ -37,6 +39,7 @@ namespace Exhibition_Management_System
             dt.Load(sdr);
             con.Close();
 
+            // Displays the data in Datagrid
             dataGridView1.DataSource = dt;
         }
     }

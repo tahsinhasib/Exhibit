@@ -101,8 +101,28 @@ namespace Exhibition_Management_System
 
         private void AdminProfile_Load(object sender, EventArgs e)
         {
+            // Selects the value for roundness
             panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 40, 40));
         }
+
+
+        /*A method signature for an external method call to the Windows GDI (Graphics Device Interface) 
+         * library function "CreateRoundRectRgn" The CreateRoundRectRgn method is used to create a region 
+         * with rounded corners, which can be used to define the shape of a window, a button, or any other 
+         * control in a graphical user interface. The parameters to this function specify the coordinates 
+         * of a rectangle and the size of the ellipse that defines the curvature of the corners.
+         * 
+         * The DllImport attribute is used to indicate that this method is implemented in an external 
+         * library (Gdi32.dll in this case) and that the method signature should be marshaled to and from 
+         * unmanaged code. The EntryPoint parameter specifies the name of the function in the external 
+         * library that corresponds to this method.
+         * 
+         * The IntPtr return type indicates that the method returns a handle to the region that is created, 
+         * which can be used in other GDI functions to manipulate the region.
+         * 
+         * Responsible for making the outlines rounded for buttons and panels.
+         */
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
