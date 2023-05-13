@@ -21,6 +21,7 @@ namespace Exhibition_Management_System
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
         private void AdminReview_Load(object sender, EventArgs e)
         {
+            // This method displays all the data present in the ReviewDataTable 
             GetReviews();
         }
 

@@ -25,6 +25,51 @@ namespace Exhibition_Management_System
                 con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
                 con.Open();
 
+                /* -->>> string query1 = "SELECT Username FROM UserDataTable WHERE Username = '" + Profile + "'";
+                 * 
+                 * This line constructs a SQL query string that will be used to select the "Username" 
+                 * column from the "UserDataTable" table where the "Username" column matches the input 
+                 * "Profile" string. The query string is stored in the query1 variable.
+                 * 
+                 * -->>> SqlCommand cmd1 = new SqlCommand(query1, con);
+                 * 
+                 * This line creates a new SqlCommand object named cmd1 that will execute the SQL query 
+                 * stored in the query1 variable. The con parameter passed to the constructor is a 
+                 * SqlConnection object that represents the connection to the database.
+                 * 
+                 * 
+                 * -->>> DataSet ds1 = new DataSet();
+                 * 
+                 * This line creates a new DataSet object named ds1 that will hold the results of the SQL query.
+                 * 
+                 * -->>> SqlDataAdapter adp1 = new SqlDataAdapter(cmd1);
+                 * 
+                 * This line creates a new SqlDataAdapter object named adp1 that will fill the DataSet object with 
+                 * data from the database using the SqlCommand object cmd1
+                 * 
+                 * -->>> adp1.Fill(ds1);
+                 * 
+                 * This line executes the SQL query and fills the DataSet object ds1 with the result.
+                 * 
+                 * -->>> DataTable dt1 = ds1.Tables[0];
+                 * 
+                 * This line creates a new DataTable object named dt1 that contains the first table of the DataSet 
+                 * object ds1, which in this case will contain only one table.
+                 * 
+                 * -->>> string Username = dt1.Rows[0]["Username"].ToString();
+                 * 
+                 * This line retrieves the value of the "Username" column from the first row of the DataTable object 
+                 * dt1 and stores it in the Username variable as a string.
+                 * 
+                 * -->>> label9.Text = Username;
+                 * 
+                 * This line sets the Text property of a Label object named label9 to the value of the Username variable, 
+                 * which will display the retrieved "Username" value in the UI.
+                 */
+
+
+
+
                 string query1 = "SELECT Username FROM UserDataTable WHERE Username = '" + Profile + "'";
                 SqlCommand cmd1 = new SqlCommand(query1, con);
                 DataSet ds1 = new DataSet();

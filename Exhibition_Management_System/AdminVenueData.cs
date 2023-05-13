@@ -25,8 +25,10 @@ namespace Exhibition_Management_System
         public string VenID;
         private void AdminVenueData_Load(object sender, EventArgs e)
         {
+            // This method displays all the details of VenueDataTable
             GetVenueDataRecord();
 
+            // For making the roundness of buttons
             button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
             button2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button2.Width, button2.Height, 40, 40));
             button3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button3.Width, button3.Height, 40, 40));
@@ -73,6 +75,7 @@ namespace Exhibition_Management_System
                     con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
                     con.Open();
 
+                    // For inserting the venues in VenueDataTable
                     string query = "INSERT INTO VenueDataTable (VenueID, VenueName) VALUES ('" + id + "','" + name + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
@@ -86,9 +89,15 @@ namespace Exhibition_Management_System
                 {
                     con.Close();
                     MessageBox.Show("Succesfully registered!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    // Dynamically updates the information in table
                     GetVenueDataRecord();
+
+                    // Clears the textboxes for reuse
                     richTextBox1.Clear();
                     richTextBox2.Clear();
+
+                    // This prevents the label to hide after inserting into the table
                     lblavailable.Visible = false;
                     lbltaken.Visible = false;
                 }
@@ -101,6 +110,7 @@ namespace Exhibition_Management_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // This part is used for navigating the data table by clicking onto it
             VenID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             richTextBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
@@ -117,6 +127,7 @@ namespace Exhibition_Management_System
                     con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
                     con.Open();
 
+                    // This query is used for updating the VenueTableInformation
                     string query = "UPDATE VenueDataTable SET VenueName = @VenueName WHERE VenueID = '" + venid + "'";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -196,6 +207,10 @@ namespace Exhibition_Management_System
         {
             try
             {
+                /*
+                 * If atleast one venueID is present in the table then the system will
+                 * restrict user to use the same ID for another venue
+                 */
                 con.Open();
                 string query2 = "SELECT COUNT(*) FROM VenueDataTable WHERE VenueID = @VenueID";
                 SqlCommand cmd2 = new SqlCommand(query2, con);
