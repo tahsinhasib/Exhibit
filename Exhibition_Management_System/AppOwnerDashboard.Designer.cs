@@ -513,7 +513,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AppOwnerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Owner Dashboard";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.AppOwnerDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

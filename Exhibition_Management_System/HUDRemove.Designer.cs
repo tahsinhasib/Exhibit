@@ -169,7 +169,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HUDRemove";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "HUDRemove";
+            this.Text = "Remove user";
             this.Load += new System.EventHandler(this.HUDRemove_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

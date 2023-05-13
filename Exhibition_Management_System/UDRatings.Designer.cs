@@ -292,7 +292,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UDRatings";
-            this.Text = "UDRatings";
+            this.Text = "Feedback";
             this.Load += new System.EventHandler(this.UDRatings_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

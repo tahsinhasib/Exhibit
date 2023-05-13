@@ -166,9 +166,10 @@
             this.ClientSize = new System.Drawing.Size(1030, 602);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HUDSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "HUDSearch";
+            this.Text = "Search";
             this.Load += new System.EventHandler(this.HUDSearch_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -330,7 +330,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HUDUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "HUDUpdate";
+            this.Text = "Update";
             this.Load += new System.EventHandler(this.HUDUpdate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

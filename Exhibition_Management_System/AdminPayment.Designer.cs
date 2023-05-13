@@ -121,7 +121,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminPayment";
-            this.Text = "AdminPayment";
+            this.Text = "Users payment";
             this.Load += new System.EventHandler(this.AdminPayment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

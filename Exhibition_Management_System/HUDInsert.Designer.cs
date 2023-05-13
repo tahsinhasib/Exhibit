@@ -436,7 +436,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HUDInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Insert an User";
+            this.Text = "Insert user";
             this.Load += new System.EventHandler(this.HUDInsert_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

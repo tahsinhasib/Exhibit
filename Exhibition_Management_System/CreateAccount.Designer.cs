@@ -488,7 +488,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CreateAccount";
+            this.Text = "Create account";
             this.Load += new System.EventHandler(this.CreateAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

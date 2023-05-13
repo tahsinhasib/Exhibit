@@ -137,7 +137,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HDVenues";
-            this.Text = "HDVenues";
+            this.Text = "Venues";
             this.Load += new System.EventHandler(this.HDVenues_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
