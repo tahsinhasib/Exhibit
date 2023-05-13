@@ -52,7 +52,8 @@ namespace Exhibition_Management_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            HUDSearch d = new HUDSearch();
+            d.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
