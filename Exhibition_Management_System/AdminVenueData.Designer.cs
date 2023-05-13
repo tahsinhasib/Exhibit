@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminVenueData));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbltaken = new System.Windows.Forms.Label();
+            this.lblavailable = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -119,24 +121,24 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -149,6 +151,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Ivory;
+            this.panel2.Controls.Add(this.lbltaken);
+            this.panel2.Controls.Add(this.lblavailable);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.richTextBox2);
             this.panel2.Controls.Add(this.richTextBox1);
@@ -159,6 +163,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(396, 529);
             this.panel2.TabIndex = 1;
+            // 
+            // lbltaken
+            // 
+            this.lbltaken.AutoSize = true;
+            this.lbltaken.BackColor = System.Drawing.Color.Transparent;
+            this.lbltaken.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbltaken.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbltaken.Location = new System.Drawing.Point(149, 111);
+            this.lbltaken.Name = "lbltaken";
+            this.lbltaken.Size = new System.Drawing.Size(75, 19);
+            this.lbltaken.TabIndex = 9;
+            this.lbltaken.Text = "❌ Taken";
+            this.lbltaken.Visible = false;
+            this.lbltaken.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // lblavailable
+            // 
+            this.lblavailable.AutoSize = true;
+            this.lblavailable.BackColor = System.Drawing.Color.Transparent;
+            this.lblavailable.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblavailable.ForeColor = System.Drawing.Color.Green;
+            this.lblavailable.Location = new System.Drawing.Point(149, 111);
+            this.lblavailable.Name = "lblavailable";
+            this.lblavailable.Size = new System.Drawing.Size(98, 19);
+            this.lblavailable.TabIndex = 8;
+            this.lblavailable.Text = "✔ Available";
+            this.lblavailable.Visible = false;
             // 
             // panel3
             // 
@@ -233,6 +264,7 @@
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.richTextBox2.Location = new System.Drawing.Point(37, 187);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(317, 41);
@@ -241,18 +273,20 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(37, 82);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox1.Location = new System.Drawing.Point(37, 55);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(317, 41);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(37, 139);
+            this.label2.Location = new System.Drawing.Point(37, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 27);
             this.label2.TabIndex = 1;
@@ -263,11 +297,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(37, 40);
+            this.label1.Location = new System.Drawing.Point(37, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 27);
+            this.label1.Size = new System.Drawing.Size(319, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Venue ID";
+            this.label1.Text = "Venue ID (Must be an integer)";
             // 
             // AdminVenueData
             // 
@@ -310,5 +344,7 @@
         private Label label3;
         private PictureBox pictureBox2;
         private Label label4;
+        private Label lbltaken;
+        private Label lblavailable;
     }
 }

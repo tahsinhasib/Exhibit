@@ -61,7 +61,8 @@ namespace Exhibition_Management_System
         private void button3_Click(object sender, EventArgs e)
         {
             if(richTextBox1.Text != "" &&
-                richTextBox2.Text != "")
+                richTextBox2.Text != "" &&
+                lblavailable.Visible == true)
             {
                 string id = richTextBox1.Text;
                 string name = richTextBox2.Text;
@@ -88,6 +89,8 @@ namespace Exhibition_Management_System
                     GetVenueDataRecord();
                     richTextBox1.Clear();
                     richTextBox2.Clear();
+                    lblavailable.Visible = false;
+                    lbltaken.Visible = false;
                 }
             }
             else
@@ -135,6 +138,8 @@ namespace Exhibition_Management_System
                     GetVenueDataRecord();
                     richTextBox1.Clear();
                     richTextBox2.Clear();
+                    lblavailable.Visible = false;
+                    lbltaken.Visible = false;
                 }
             }
             else
@@ -178,6 +183,45 @@ namespace Exhibition_Management_System
             richTextBox1.Clear();
             richTextBox2.Clear();
             GetVenueDataRecord();
+            lblavailable.Visible = false;
+            lbltaken.Visible = true;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query2 = "SELECT COUNT(*) FROM VenueDataTable WHERE VenueID = @VenueID";
+                SqlCommand cmd2 = new SqlCommand(query2, con);
+                cmd2.Parameters.AddWithValue("@VenueID", richTextBox1.Text);
+
+                int count = (int)cmd2.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    lbltaken.Visible = true;
+                    lblavailable.Visible = false;
+                }
+                else
+                {
+                    lblavailable.Visible = true;
+                    lbltaken.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

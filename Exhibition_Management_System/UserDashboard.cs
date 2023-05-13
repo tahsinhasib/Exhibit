@@ -37,7 +37,7 @@ namespace Exhibition_Management_System
             button5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
             button6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 40, 40));
 
-            //panelChildForm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelChildForm.Width, panelChildForm.Height, 40, 40));
+            
             panelChildForm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelChildForm.Width, panelChildForm.Height, 40, 40));
             panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 40, 40));
             panel4.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 40, 40));
