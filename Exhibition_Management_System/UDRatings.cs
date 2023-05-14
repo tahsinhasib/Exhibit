@@ -38,6 +38,8 @@ namespace Exhibition_Management_System
                 string evname = textBox2.Text;
                 string rate = "";
 
+                // This part of the code is responsible for picking up the input from radiobutton
+
                 if(radioButton1.Checked)
                 {
                     rate = radioButton1.Text;

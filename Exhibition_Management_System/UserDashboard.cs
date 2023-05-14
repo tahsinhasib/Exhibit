@@ -96,5 +96,10 @@ namespace Exhibition_Management_System
         {
             openChildForm(new UDRatings(temp));
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

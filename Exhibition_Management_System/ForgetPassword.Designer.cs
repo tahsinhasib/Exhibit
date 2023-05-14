@@ -77,7 +77,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Ivory;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblnotmatched);

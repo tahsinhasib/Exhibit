@@ -82,7 +82,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Ivory;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblPhnCross);
             this.panel2.Controls.Add(this.lblPhnRight);
@@ -486,6 +486,7 @@
             this.ClientSize = new System.Drawing.Size(1432, 873);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create account";
