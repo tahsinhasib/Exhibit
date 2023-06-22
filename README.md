@@ -2,7 +2,14 @@
 
 Introducing Exhibit, the ultimate solution for seamless event planning. Exhibit allows you to easily search for and book a wide range of events, from concerts to conferences and everything in between. With a user-friendly interface and real-time updates, you can browse upcoming events, check availability, and make reservations all in one place. Plus, this app offers customizable event alerts, so you'll never miss an opportunity to attend your favorite events. Whether you're planning a night out with friends or a corporate event, Exhibit app has you covered.
 
-💠 Exhibit contains three types of user
+# How to use
+First, make sure SQL Server Management Studio (SSMS) and Microsoft Visual Studio are installed. The database must be extracted using SSMS from the "Database Backup" folder. After that, you must change the Desktop name in the cs files to reflect the name of your desktop or laptop. 
+
+For example: con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+
+replace "DESKTOP-TGP1F01" with the name of your desktop in specific files
+
+## Exhibit contains three types of user
 - Admin
 - Host
 - Guest
