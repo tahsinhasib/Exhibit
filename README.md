@@ -5,9 +5,10 @@ Introducing Exhibit, the ultimate solution for seamless event planning. Exhibit 
 # How to use
 First, make sure SQL Server Management Studio (SSMS) and Microsoft Visual Studio are installed. The database must be extracted using SSMS from the "Database Backup" folder. After that, you must change the Desktop name in the cs files to reflect the name of your desktop or laptop. 
 
-For example: con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");
+For example: 
+<code>con = new SqlConnection("Data Source=DESKTOP-TGP1F01;Initial Catalog=ExhibitDB;Integrated Security=True");</code>
 
-replace "DESKTOP-TGP1F01" with the name of your desktop in specific files
+replace <code>"DESKTOP-TGP1F01"</code> with the name of your desktop in specific files
 
 ## Exhibit contains three types of user
 - Admin
