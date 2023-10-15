@@ -10,7 +10,9 @@ For example:
 
 replace <code>"DESKTOP-TGP1F01"</code> with the name of your desktop in specific files
 
-## Exhibit contains three types of user
+## Softwares used: <img src="https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white"> <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white"> <img src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black">
+
+## Exhibit (an event management system)
 - Admin
 - Host
 - Guest
